@@ -7,8 +7,8 @@
     <title>Customer Satisfaction Survey</title>
 </head>
 <body>
-    <h1>Customer Satisfaction Survey</h1>
-    <h3>Please fill out a survey about your experience with us.</h3>
-    <a href="questions"><button id="start" value="start survey">Start Survey</button><a/>
+    {% for msg in get_flashed_messages() %}
+    <p>{{ msg }}</p>
+    {% endfor %} {% block content %} {% endblock %}
 </body>
 </html>
